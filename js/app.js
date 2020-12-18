@@ -1,16 +1,19 @@
 // General
 
-
+const hamburger = document.querySelector('#nav-icon4');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open')
+    navList.classList.toggle('active');    
+    navBar.classList.toggle('active');  
+})
 
 // Navbar
 
-const hamburger = document.querySelector('.hamburger-icon');
 const navList = document.querySelector('.navbar-list')
 const navBar = document.querySelector('.navbar-top');
 
 hamburger.addEventListener('click', ()=>{
-    navList.classList.toggle('active');    
-    navBar.classList.toggle('active');    
+  
 })
 
 // Card and projects
