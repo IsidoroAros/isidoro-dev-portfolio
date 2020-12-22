@@ -7,16 +7,16 @@
    --blackFont: rgb(27, 27, 27);
 }
 
-.animate__animated.animate__fadeInUp{
-    --animate-duration: 1s;
-}
-
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0px auto;
     box-sizing: border-box;
     width: 100%;
     scroll-behavior: smooth;
+}
+
+.animate__animated.animate__fadeInUp{
+    --animate-duration: 1.5s;
 }
 
 body{
@@ -311,10 +311,15 @@ body{
 /*---------- PROJECTS ----------*/
 
 .projects{
+    display: none;
     max-width: 95%;
     height: auto;
     margin-top: 25px;
     overflow: hidden;
+}
+
+.projects.animate__animated.animate__fadeInUp{
+    --animate-duration: 2.5s;
 }
 
 .projects-row{
