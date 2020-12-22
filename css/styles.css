@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,100&display=swap');
 
 :root{
-   --ppalColor:  rgb(238, 238, 255);
+   --ppalColor:  rgb(248, 248, 255);
    --darkThemePpalColor:  rgb(38, 38, 39);
-   --neumorphicWhiteShadow: 3px 3px 10px rgba(65, 57, 57, 0.151), -5px -5px 5px rgba(255, 255, 255, 0.698);
+   --neumorphicWhiteShadow: 3px 3px 10px #312b490e, -5px -5px 5px rgb(255, 255, 255);
    --blackFont: rgb(27, 27, 27);
 }
 
@@ -26,7 +26,7 @@ body{
 }
 
 .navbar-top{
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top: 0;
     height: 4.5rem;
@@ -59,15 +59,6 @@ body{
     height: 100%;
     align-items: flex-start;
 }
-
-/* .hamburger-icon{
-    cursor: pointer;
-    font-size: 20px;
-    width: 20%;
-    font-weight: 400;
-    color: var(--darkThemePpalColor);
-} */
-
 
 #nav-icon4{
     display: flex;
@@ -212,8 +203,7 @@ body{
 
 .intro-gif{
     display: flex;
-    width: 80%;
-    height: 80%;
+    width: 65%;
 }
 
 .ppal-screen{
@@ -249,16 +239,16 @@ body{
 .ppal-words-h6{
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
-button{
+.button{
     box-shadow: var(--neumorphicWhiteShadow);
 }
 
 
-button,
-button a{
+.button,
+.button a{
     width: 180px;
     padding: 12px;
     border-radius: 20px;
@@ -282,10 +272,12 @@ button a{
 }
 
 .about-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80%;
     margin: auto;
-    text-align: justify;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-bottom: 3%;
 }
 
@@ -295,6 +287,7 @@ button a{
     justify-content: center;
     width: 50%;
     height: 100%;
+    margin-top: 20px;
 }
 
 .about-photo img{
@@ -324,7 +317,7 @@ button a{
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    padding: 10px;
+    padding: 30px;
 }
 
 .project-card{
@@ -346,10 +339,105 @@ button a{
 .project-miniature{
     width: 100%;
     height: 45%;
-    border-radius: 8px 8px 0px  0px ;
+    border-radius: 8px 8px 0px  0px;
 }
 
 .project-card-info{
     padding: 10px;
     padding-left: 20px;
+}
+
+/*---------- PROJECTS INJECTION ----------*/
+
+.project-injection-view{
+    margin-top: 30px;
+    height: auto;
+    max-width: 100%;
+    box-shadow: var(--neumorphicWhiteShadow);
+    border-radius: 15px;
+    /* border: 1px solid red; */
+}
+
+.close-button-container{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.close-button{
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-image: linear-gradient(#e63d3d, #f86067);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.253);
+    z-index: 1;
+}
+#x-icon{
+    color: rgba(255, 255, 255, 0.774);
+}
+
+#x-icon::before{
+    display: flex;
+    justify-content: center;
+}
+
+.project-injection-cover{
+    margin-top: -25px;
+}
+
+.project-injection-cover img{
+    border-radius: 8px 8px 0px 0px;
+}
+
+.project-injection-info{
+    padding: 20px;
+}
+
+.project-injection-title{
+    padding-bottom: 10px;
+}
+
+.project-injection-paragraph{
+    text-align: justify;
+}
+
+.project-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-btn{
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 30px;
+    background-color: transparent;
+    box-shadow: var(--neumorphicWhiteShadow);
+    outline: none;
+}
+
+.project-btn a{
+    width: auto;
+    color: var(--darkThemePpalColor);
+    text-decoration: none;
+    margin-left: -8px;
+}
+
+.project-btn img{
+    height: 80%;
+    width: auto;
 }

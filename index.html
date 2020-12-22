@@ -10,6 +10,11 @@
 </head>
 <body>
     
+    <!-- <div class="theme-switcher">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </div> -->
+
     <header class="navbar-top container-flex">
         <!-- <div class="navbar-hamburger">
             <i class="fas fa-bars hamburger-icon"></i>
@@ -37,25 +42,25 @@
 <section class="landing">     
     <div class="ppal-screen">
         <div class="ppal-banner">
+            <div class="ppal-words">
+                <h5 class="ppal-words-h5">Welcome to my portfolio!</h5>
+                <h6 class="ppal-words-h6">I'm Isidoro and I would love to share my work with you!</h6>
+                <button class="button"> <a href="#projects">Show me more</a> </button>
+            </div>
             <img class="intro-gif" src="img/animation_640_kitqcv9e.gif" alt="">
-                <div class="ppal-words">
-                    <h5 class="ppal-words-h5">Welcome to my portfolio!</h5>
-                    <h6 class="ppal-words-h6">I'm Isidoro and I would love to share my work with you!</h6>
-                    <button class="button"> <a href="#projects">Show me more</a> </button>
-                </div>
         </div>
     </div>
 </section>
 
 <section class="about-main">
     <div class="about-photo">
-        <img src="img/IMG_0594.jpg" alt="Isidoro">
+        <img src="img/Isidoro-pic.jpg" alt="Isidoro">
     </div>
     <div class="about-info">
         <p>
             Hi, my name is Isidoro Aróstegui (he/him).
             I'm an argentinian 23 y/o self-taught developer, coding my front-end path.
-            Currently i'm dabbling in React and Node JS.
+            Currently dabbling into React and Node JS.
         </p>
     </div>
     <div class="download">
@@ -68,7 +73,7 @@
     <div class="projects-row">
 
         <div class="project-card" data-id="1">
-            <img src="/img/Minimalist-Design_Internal-1024x536.png" alt="project" class="project-miniature">
+            <img src="/img/minimalistic.png" alt="project" class="project-miniature">
             <div class="project-card-info">
                 <h2>Title</h2>
                 <p>Short description</p>
@@ -76,7 +81,7 @@
         </div>
 
         <div class="project-card" data-id="2">
-            <img src="/img/Minimalist-Design_Internal-1024x536.png" alt="project" class="project-miniature">
+            <img src="/img/minimalistic.png" alt="project" class="project-miniature">
             <div class="project-card-info">
                 <h2>Title</h2>
                 <p>Short description</p>
@@ -84,7 +89,7 @@
         </div>
 
         <div class="project-card" data-id="3">
-            <img src="/img/Minimalist-Design_Internal-1024x536.png" alt="project" class="project-miniature">
+            <img src="/img/minimalistic.png" alt="project" class="project-miniature">
             <div class="project-card-info">
                 <h2>Title</h2>
                 <p>Short description</p>
@@ -92,7 +97,7 @@
         </div>
 
         <div class="project-card" data-id="4">
-            <img src="/img/Minimalist-Design_Internal-1024x536.png" alt="project" class="project-miniature">
+            <img src="/img/minimalistic.png" alt="project" class="project-miniature">
             <div class="project-card-info">
                 <h2>Title</h2>
                 <p>Short description</p>
@@ -100,7 +105,7 @@
         </div>
 
         <div class="project-card" data-id="3">
-            <img src="/img/Minimalist-Design_Internal-1024x536.png" alt="project" class="project-miniature">
+            <img src="/img/minimalistic.png" alt="project" class="project-miniature">
             <div class="project-card-info">
                 <h2>Title</h2>
                 <p>Short description</p>
@@ -109,10 +114,31 @@
 
     </div>
 
-    <div class="project-injection-view"></div>
+    <!--Here goes injected the project data-->
+    <div class="project-injection-view">
+        
+        <!-- <div class="close-button-container">
+            <div class="close-button"><i class="fas fa-times" id="x-icon"></i></div>
+        </div>
+
+        <div class="project-injection-cover">
+            <img src="img/minimalistic.png" alt="">
+        </div>
+
+        <div class="project-injection-info">
+            <h1 class="project-injection-title">Project Title</h1>
+            <p class="project-injection-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut praesentium natus harum enim deleniti itaque, excepturi veniam aliquam consequuntur minima cum odit neque totam quibusdam. Reiciendis blanditiis corporis fugiat doloribus!</p>
+        </div>
+
+        <div class="project-buttons">
+            <button class="project-btn" id="github-button"><img src="img/github.svg" alt=""><a class="button-reference" href="#">Browse code</a></button>
+            <button class="project-btn"><img src="img/livestream.png" alt=""><a class="button-reference" href="#" id="preview-button">Watch live</a></button>
+        </div> -->
+
+    </div>
 
 </section>
-    
+
     <script src="./js/app.js"></script>
 </body>
 </html>
