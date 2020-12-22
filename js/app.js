@@ -69,13 +69,12 @@ window.addEventListener('scroll', createAnimations)
 const aboutMain = document.querySelector('.about-main')
 
 function createAnimations() {
-    if(window.scrollY >= aboutMain.getBoundingClientRect().top - 150){
+    if(window.scrollY >= aboutMain.getBoundingClientRect().top - 200){
         aboutMain.classList.add('animate__animated', 'animate__fadeInUp')
         aboutMain.style.display = 'block';
     }
-    if(window.scrollY >= projectContainer.getBoundingClientRect().top - 150){
+    if(window.scrollY >= projectContainer.getBoundingClientRect().top - 200){
         projectContainer.classList.add('animate__animated', 'animate__fadeInUp')
         projectContainer.style.display = 'block';
     }
 }
-
