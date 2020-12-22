@@ -20,6 +20,10 @@ hamburger.addEventListener('click', ()=>{
 const projectContainer = document.querySelector('#projects');
 const projectInjectionView = document.querySelector('.project-injection-view');
 const closeButton = document.querySelector('.close-button');
+const projectRow = document.querySelector('.projects-row')
+const projectArray = document.querySelectorAll('.project-card');
+// const projectArray = projectRow.children;
+
 
 projectContainer.addEventListener('click', mostrarProyecto);
 projectContainer.addEventListener('click', (e) => {
@@ -30,12 +34,28 @@ projectContainer.addEventListener('click', (e) => {
 
 function mostrarProyecto(e) {
     if(e.target.parentNode.classList.contains("project-card") || e.target.parentNode.parentNode.classList.contains("project-card")){
-        const proyecto = {
-            miniatura: document.querySelector('.project-card img').src,
-            project: document.querySelector('.project-card h2').textContent,
-            descripcion: document.querySelector('.project-card p').textContent,
-            id: document.querySelector('.project-card').getAttribute('data-id')
+        var id = e.target.parentNode.getAttribute('data-id');
+        
+        if(id > 0){
+            console.log(`Le pego muñeco  ${id}`)
+        }else{
+            id = e.target.parentNode.parentNode.getAttribute('data-id');
+            console.log(`Le pego también muñeco  ${id}`)
         }
+
+        let proyecto;
+
+        projectArray.forEach( element => {
+            if(element.getAttribute('data-id') === id){
+                proyecto = {
+                    miniatura: element.children[0].src,
+                    project: element.children[1].children[0].textContent,
+                    descripcion: element.children[1].children[1].textContent,
+                    id: id
+                }
+            }
+        });
+
         projectInjectionView.innerHTML = `
         <div class="close-button-container">
             <div class="close-button"><i class="fas fa-times" id="x-icon"></i></div>
@@ -57,9 +77,9 @@ function mostrarProyecto(e) {
             `
         }
         window.scrollBy(0,400);
-}
+    }
     
-function clearInjection(e) {
+function clearInjection() {
     projectInjectionView.innerHTML = '';
 }
 
@@ -71,10 +91,8 @@ const aboutMain = document.querySelector('.about-main')
 function createAnimations() {
     if(window.scrollY >= aboutMain.getBoundingClientRect().top - 200){
         aboutMain.classList.add('animate__animated', 'animate__fadeInUp')
-        // aboutMain.style.display = 'block';
     }
     if(window.scrollY >= projectContainer.getBoundingClientRect().top - 200){
         projectContainer.classList.add('animate__animated', 'animate__fadeInUp')
-        // projectContainer.style.display = 'block';
     }
 }
