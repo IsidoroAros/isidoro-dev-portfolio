@@ -267,7 +267,7 @@ body{
 /*---------- ABOUT ME ----------*/
 
 .about-main{
-    display: none;
+    /* display: none; */
     position: relative;
     height: auto;
     max-width: 95%;
@@ -311,7 +311,7 @@ body{
 /*---------- PROJECTS ----------*/
 
 .projects{
-    display: none;
+    /* display: none; */
     max-width: 95%;
     height: auto;
     margin-top: 25px;
