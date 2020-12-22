@@ -329,6 +329,7 @@ body{
     overflow-y: hidden;
     white-space: nowrap;
     padding: 30px;
+    margin-left: -30px;
 }
 
 .project-card{
