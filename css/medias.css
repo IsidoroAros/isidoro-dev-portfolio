@@ -1,0 +1,60 @@
+@media (min-width: 750px){
+    /*-------- NAVBAR --------*/
+    .navbar-top{
+        justify-content: space-around;
+
+    }
+    .hamburger-container{
+        display: none;
+    }
+    .navbar-options{
+        margin: 0;
+        display: flex;
+        height: 100%;
+        flex-basis: 70%;
+        justify-content: space-between;
+    }
+    .navbar-list{
+        padding: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 100px;
+    }
+    .navbar-logo{
+        margin: 0;
+        flex-basis: 5%;
+    }
+    /*-------- PPAL BANNER --------*/
+    .ppal-banner{
+        display: grid;
+        padding: 20px;
+    }
+    .ppal-words{
+        margin: auto;
+    }
+    #show-me-mode-btn{
+        margin-top: 10px;
+    }
+    
+    /*-------- ABOUT ME --------*/
+    .about-main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 75% 25%;
+        grid-template-areas: 'photo data' 'photo2 data2';
+    }
+    .about-info{
+        grid-area: data;
+        height: 80%;
+        align-self: center;
+    }
+    .download{
+        grid-area: data2;
+    }
+    .button, button a{
+        margin: auto;
+        width: 180px;
+        height: 45px;
+    }
+}

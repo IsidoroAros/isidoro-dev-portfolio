@@ -36,13 +36,10 @@ function mostrarProyecto(e) {
     if(e.target.parentNode.classList.contains("project-card") || e.target.parentNode.parentNode.classList.contains("project-card")){
         var id = e.target.parentNode.getAttribute('data-id');
         
-        if(id > 0){
-            console.log(`Le pego muñeco  ${id}`)
-        }else{
+        if(!id > 0){
             id = e.target.parentNode.parentNode.getAttribute('data-id');
-            console.log(`Le pego también muñeco  ${id}`)
         }
-
+        
         let proyecto;
 
         projectArray.forEach( element => {
