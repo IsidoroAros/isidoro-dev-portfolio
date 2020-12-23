@@ -12,6 +12,7 @@
     margin: 0px auto;
     box-sizing: border-box;
     width: 100%;
+    max-width: 1400px;
     scroll-behavior: smooth;
 }
 
@@ -265,11 +266,13 @@ body{
     margin-top: 25px;
     border-radius: 15px;
     box-shadow: var(--neumorphicWhiteShadow);
+
 }
 
 .about-info{
     display: flex;
     align-items: center;
+    flex-flow: column;
     justify-content: center;
     width: 80%;
     margin: auto;
@@ -290,6 +293,30 @@ body{
     border-radius: 100%;
     width: 200px;
     height: 200px;
+}
+
+.about-technologies{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    line-height: 50px;
+    padding: 14px;
+    overflow:-moz-hidden-unscrollable;
+}
+
+.about-technology-span{
+    width: auto;
+    padding: 8px;
+    background-color: transparent;
+    border: 0.5px solid  rgb(38, 38, 39);
+    margin: 6px;
+    border-radius: 25px;
+    color: var(--blackFont);
+}
+
+.about-technology-span:hover{
+    color: rgb(84, 84, 194);
+    border:0.5px solid rgb(84, 84, 194);
 }
 
 .download{

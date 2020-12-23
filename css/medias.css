@@ -39,27 +39,35 @@
     
     /*-------- ABOUT ME --------*/
     .about-main{
+        height: auto;
+        width: 100%;
+        padding: 0px;
+        margin: auto;
+        margin-top: 60px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 75% 25%;
-        grid-template-areas: 'photo data' 'photo2 data2';
+        grid-template-rows: 1fr;
+        grid-template-areas: 'photo data';
     }
     .about-info{
+        flex-flow: column;
         grid-area: data;
-        height: 80%;
         align-self: center;
+        padding: 10px;
+    }
+    .about-technologies{
+        width: fit-content;
+        overflow: hidden;
+        grid-area: data;
+        padding: 0px;
     }
     .download{
-        grid-area: data2;
+        margin: 0px;
+        padding: 0px;
     }
     .button, button a{
-        margin: auto;
         width: 180px;
         height: 45px;
-        margin-top: -25px;
-    }
-    .project-injection-view{
-        width: 60%;
     }
     .project-btn{
         display: flex;
@@ -69,5 +77,23 @@
         margin: 0%;
         margin-left: 5px;
         height: auto;
+    }
+    .about-photo{
+        margin: auto;
+        grid-area: photo;
+    }
+    .project-injection-view{
+        width: 60%;
+    }
+}
+
+
+@media (min-width: 1390px){
+    .about-technologies{
+        width: fit-content;
+        overflow: hidden;
+        grid-area: data;
+        padding: 20px;
+        padding-left: 0px;
     }
 }
