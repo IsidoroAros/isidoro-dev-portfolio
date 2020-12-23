@@ -3,7 +3,7 @@
 :root{
    --ppalColor:  rgb(248, 248, 255);
    --darkThemePpalColor:  rgb(38, 38, 39);
-   --neumorphicWhiteShadow: 3px 3px 10px #312b490e, -5px -5px 5px rgb(255, 255, 255);
+   --neumorphicWhiteShadow: 3px 3px 10px #6e698532, -5px -5px 5px rgb(255, 255, 255);
    --blackFont: rgb(27, 27, 27);
 }
 
@@ -14,10 +14,6 @@
     width: 100%;
     max-width: 1400px;
     scroll-behavior: smooth;
-}
-
-.animate__animated.animate__fadeInUp{
-    --animate-duration: 1.5s;
 }
 
 body{
@@ -269,6 +265,10 @@ body{
 
 }
 
+.about-main.animate__animated.animate__fadeInUp{
+    --animate-duration: 2s;
+}
+
 .about-info{
     display: flex;
     align-items: center;
@@ -335,8 +335,8 @@ body{
     overflow: hidden;
 }
 
-.projects.animate__animated.animate__fadeInUp{
-    --animate-duration: 2s;
+#projects.animate__animated.animate__fadeInUp{
+    --animate-duration: 5s;
 }
 
 .projects-row{

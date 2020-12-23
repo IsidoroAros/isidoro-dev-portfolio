@@ -82,14 +82,23 @@ function clearInjection() {
 
 // Animations
 
-window.addEventListener('scroll', createAnimations)
+// window.addEventListener('scroll', createAnimations)
 const aboutMain = document.querySelector('.about-main')
 
-function createAnimations() {
-    if(window.scrollY >= aboutMain.getBoundingClientRect().top - 200){
-        aboutMain.classList.add('animate__animated', 'animate__fadeInUp')
-    }
-    if(window.scrollY >= projectContainer.getBoundingClientRect().top - 200){
-        projectContainer.classList.add('animate__animated', 'animate__fadeInUp')
-    }
-}
+// function createAnimations() {
+//     if(window.innerWidth >= 750){
+//         if(window.scrollY >= aboutMain.getBoundingClientRect().top - 200){
+//             aboutMain.classList.add('animate__animated', 'animate__fadeInUp')
+//         }
+//         if(window.scrollY >= projectContainer.getBoundingClientRect().top - 200){
+//             projectContainer.classList.add('animate__animated', 'animate__fadeInUp')
+//         }
+//     }else{
+//         if(window.scrollY >= aboutMain.getBoundingClientRect().top - 300){
+//             aboutMain.classList.add('animate__animated', 'animate__fadeInUp')
+//         }
+//         if(window.scrollY >= projectContainer.getBoundingClientRect().top - 300){
+//             projectContainer.classList.add('animate__animated', 'animate__fadeInUp')
+//         }
+//     }
+// }
