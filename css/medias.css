@@ -58,4 +58,16 @@
         height: 45px;
         margin-top: -25px;
     }
+    .project-injection-view{
+        width: 60%;
+    }
+    .project-btn{
+        display: flex;
+        align-items: center;
+    }
+    .project-btn a{
+        margin: 0%;
+        margin-left: 5px;
+        height: auto;
+    }
 }
