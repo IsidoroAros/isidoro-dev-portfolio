@@ -11,9 +11,6 @@ hamburger.addEventListener('click', () => {
 const navList = document.querySelector('.navbar-list')
 const navBar = document.querySelector('.navbar-top');
 
-hamburger.addEventListener('click', ()=>{
-  
-})
 
 // Card and projects
 
