@@ -336,7 +336,7 @@ body{
 }
 
 #projects.animate__animated.animate__fadeInUp{
-    --animate-duration: 5s;
+    --animate-duration: 3s;
 }
 
 .projects-row{
@@ -469,4 +469,66 @@ body{
 .project-btn img{
     height: 80%;
     width: auto;
+}
+
+/*---------- FOOTER ----------*/
+
+.footer{
+    max-width: 100%;
+    height: auto;
+    background-color: var(--darkThemePpalColor);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.footer-about{
+    padding: 40px;
+    width: 60%;
+    text-align: center;
+    color: var(--ppalColor);
+}
+
+.footer-about > p{
+    opacity: 80%;
+    padding: 10px;
+}
+
+.footer-explore{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-explore > ul,
+.footer-explore > ul > li{
+    list-style-type: none;
+    margin: 0px auto;
+}
+
+.footer-social-icons{
+    margin: 0px auto;
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.footer-social-icons > a,
+#linkedin-icon,
+#github-icon,
+#instagram-icon{
+    color: var(--ppalColor);
+    width: auto;
+    height: auto;
+}
+
+.footer-social-icons > a,
+#linkedin-icon:hover,
+#github-icon:hover,
+#instagram-icon:hover{
+    color: rgb(128, 128, 245);
+    transform: scale(1.1);
+    transition: all 400ms;
 }
