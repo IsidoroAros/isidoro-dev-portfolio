@@ -354,7 +354,7 @@ body{
     cursor: pointer;
     background-color: var(--ppalColor);
     box-shadow: var(--neumorphicWhiteShadow);
-    width: 300px;
+    width: 280px;
     display: inline-block;
     margin-right: 20px;
     border-radius: 8px;
@@ -380,6 +380,7 @@ body{
 
 .project-injection-view{
     margin-top: 30px;
+    margin-bottom: 10px;
     height: auto;
     max-width: 100%;
     box-shadow: var(--neumorphicWhiteShadow);
