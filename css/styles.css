@@ -441,6 +441,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 5px;
 }
 
 .project-btn{
@@ -480,40 +481,57 @@ body{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .footer-about{
-    padding: 40px;
+    padding: 30px 30px 15px 30px;
     width: 60%;
     text-align: center;
     color: var(--ppalColor);
 }
 
+.footer-about >h2{
+    padding-bottom: 10px;
+}
+
 .footer-about > p{
     opacity: 80%;
-    padding: 10px;
+    padding: 3px;
 }
 
 .footer-explore{
+    text-align: center;
     width: 60%;
-    display: flex;
-    flex-direction: column;
 }
 
-.footer-explore > ul,
-.footer-explore > ul > li{
-    list-style-type: none;
-    margin: 0px auto;
+.footer-explore > h2{
+    padding-bottom: 10px;
+    color: var(--ppalColor);
 }
+
+.footer-explore ul{
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+.footer-explore ul li ,
+.footer-explore ul li a{
+    color: var(--ppalColor);
+    text-decoration: none;
+    list-style-type: none;
+    /* padding: 3px; */
+    line-height: 30px;
+}
+
 
 .footer-social-icons{
-    margin: 0px auto;
     display: flex;
-    width: 50%;
+    width: 60%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
 }
-
 
 .footer-social-icons > a,
 #linkedin-icon,
@@ -528,7 +546,7 @@ body{
 #linkedin-icon:hover,
 #github-icon:hover,
 #instagram-icon:hover{
-    color: rgb(128, 128, 245);
+    color: rgb(141, 141, 248);
     transform: scale(1.1);
     transition: all 400ms;
 }
