@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
 function clearInjection() {
     projectInjectionView.innerHTML = '';
-    window.scrollBy(0,-400);
+    window.scrollBy(0,-300);
     //* Probar con while(firstchild){removechild(firstchild)}
 }
 
@@ -49,18 +49,17 @@ let projectsLength = []
 function injectProjects()
 {
     projectsDB.forEach( project => {
-        const {image, title, description, github, deploy } = project;
+        const {image, title, briefDescription, description, github, deploy } = project;
         const projectCard = document.createElement('div');
-
-        // console.log(projectsLength.length)
+        projectCard.classList.add('project-card');
+        projectCard.setAttribute('data-id', projectsLength.length);
+        projectCard.addEventListener('click', showProject);
         projectCard.innerHTML = `
-        <div class="project-card" data-id="${projectsLength.length}" onclick="showProject(event)">
-            <img src="/img/minimalistic.png" alt="project" class="project-miniature">
+            <img src="${image}" alt="project" class="project-miniature">
             <div class="project-card-info">
-                <h2>${project.title}</h2>
-                <p>${project.description}</p>
+                <h2>${title}</h2>
+                <p>${briefDescription}</p>
             </div>
-        </div>
         `;
         projectsLength.push(projectCard);
         projectRow.appendChild(projectCard);
