@@ -1,4 +1,4 @@
-// Navbar
+//*-------------------------------------------------Navbar
 
 const hamburger = document.querySelector('#nav-icon4');
 
@@ -11,73 +11,102 @@ hamburger.addEventListener('click', () => {
 const navList = document.querySelector('.navbar-list')
 const navBar = document.querySelector('.navbar-top');
 
+ //*-------------------------------------------------Card and projects
+ 
+ const projectContainer = document.querySelector('#projects');
+ const projectInjectionView = document.querySelector('.project-injection-view');
+ const closeButton = document.querySelector('.close-button');
+ const projectRow = document.querySelector('.projects-row')
+ const projectArray = document.querySelectorAll('.project-card');
+ 
+ //*------------------------------------------------- Event listeners
+ 
+//  projectContainer.addEventListener('click', mostrarProyecto);
+//  projectContainer.addEventListener('click', showProject);
 
-// Card and projects
-
-const projectContainer = document.querySelector('#projects');
-const projectInjectionView = document.querySelector('.project-injection-view');
-const closeButton = document.querySelector('.close-button');
-const projectRow = document.querySelector('.projects-row')
-const projectArray = document.querySelectorAll('.project-card');
-// const projectArray = projectRow.children;
-
-
-projectContainer.addEventListener('click', mostrarProyecto);
-projectContainer.addEventListener('click', (e) => {
-    if(e.target.classList.contains('close-button') || e.target.parentNode.classList.contains('close-button')){
-        projectInjectionView.innerHTML = '';
+ projectContainer.addEventListener('click', (e) => {
+     if(e.target.classList.contains('close-button') || e.target.parentNode.classList.contains('close-button'))
+    {
+       clearInjection();
     }
+    })
+
+document.addEventListener('DOMContentLoaded', () => {
+    injectProjects();
 })
 
-function mostrarProyecto(e) {
-    if(e.target.parentNode.classList.contains("project-card") || e.target.parentNode.parentNode.classList.contains("project-card")){
-        var id = e.target.parentNode.getAttribute('data-id');
-        
-        if(!id > 0){
-            id = e.target.parentNode.parentNode.getAttribute('data-id');
-        }
-        
-        let proyecto;
+//*------------------------------------------------- Functions
+    
+function clearInjection() {
+    projectInjectionView.innerHTML = '';
+    window.scrollBy(0,-400);
+    //* Probar con while(firstchild){removechild(firstchild)}
+}
 
-        projectArray.forEach( element => {
-            if(element.getAttribute('data-id') === id){
-                proyecto = {
-                    miniatura: element.children[0].src,
-                    project: element.children[1].children[0].textContent,
-                    descripcion: element.children[1].children[1].textContent,
-                    id: id
-                }
-            }
-        });
+
+let projectsLength = []
+
+function injectProjects()
+{
+    projectsDB.forEach( project => {
+        const {image, title, description, github, deploy } = project;
+        const projectCard = document.createElement('div');
+
+        // console.log(projectsLength.length)
+        projectCard.innerHTML = `
+        <div class="project-card" data-id="${projectsLength.length}" onclick="showProject(event)">
+            <img src="/img/minimalistic.png" alt="project" class="project-miniature">
+            <div class="project-card-info">
+                <h2>${project.title}</h2>
+                <p>${project.description}</p>
+            </div>
+        </div>
+        `;
+        projectsLength.push(projectCard);
+        projectRow.appendChild(projectCard);
+        // console.log(projectsLength)
+    })
+}
+
+function showProject(e)
+{
+    let id;
+
+    e.preventDefault();
+    if(e.target.parentNode.classList.contains("project-card") || e.target.parentNode.parentNode.classList.contains("project-card"))
+    {
+        if(e.target.classList.contains('project-miniature'))
+        {
+            id = e.target.parentNode.getAttribute('data-id')
+        }else{
+            id = e.target.parentNode.parentNode.getAttribute('data-id')
+        }
 
         projectInjectionView.innerHTML = `
-        <div class="close-button-container">
+            <div class="close-button-container">
             <div class="close-button"><i class="fas fa-times" id="x-icon"></i></div>
             </div>
             
             <div class="project-injection-cover">
-            <img src="${proyecto.miniatura}" alt="">
+            <img src="${projectsDB[id].image}" alt="">
             </div>
             
             <div class="project-injection-info">
-            <h1 class="project-injection-title">${proyecto.project}</h1>
-            <p class="project-injection-paragraph">${proyecto.descripcion}</p>
+            <h1 class="project-injection-title">${projectsDB[id].title}</h1>
+            <p class="project-injection-paragraph">${projectsDB[id].description}</p>
             </div>
             
             <div class="project-buttons">
-            <button class="project-btn" id="github-button"><img src="img/github.svg" alt=""><a class="button-reference" href="#">Browse code</a></button>
-            <button class="project-btn"><img src="img/livestream.png" alt=""><a class="button-reference" href="#" id="preview-button">Watch live</a></button>
+            <button class="project-btn" id="github-button"><img src="img/github.svg" alt=""><a class="button-reference" href="${projectsDB[id].github}" target="_blank">Browse code</a></button>
+            <button class="project-btn"><img src="img/livestream.png" alt=""><a class="button-reference" href="${projectsDB[id].deploy}" id="preview-button" target="_blank">Watch live</a></button>
             </div>
             `
-        }
         window.scrollBy(0,400);
     }
-    
-function clearInjection() {
-    projectInjectionView.innerHTML = '';
 }
 
-// Animations
+
+//*------------------------------------------------- Animations
 
 // window.addEventListener('scroll', createAnimations)
 const aboutMain = document.querySelector('.about-main')

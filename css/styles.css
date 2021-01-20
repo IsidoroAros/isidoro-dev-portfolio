@@ -293,6 +293,7 @@ body{
     border-radius: 100%;
     width: 200px;
     height: 200px;
+    margin-bottom: 10px;
 }
 
 .about-technologies{
@@ -340,7 +341,7 @@ body{
 }
 
 .projects-row{
-    display: block;
+    display: flex;
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -456,9 +457,10 @@ body{
     align-items: center;
     border: none;
     border-radius: 30px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--ppalColor);
     box-shadow: var(--neumorphicWhiteShadow);
     outline: none;
+    margin-bottom: 1rem;
 }
 
 .project-btn a{
