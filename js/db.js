@@ -21,7 +21,7 @@ const projectsDB = [
         image: '/img/todoList.jpg"',
         title: 'To-do List',
         briefDescription: 'Task reminder that handles <br> tasks and dates.',
-        description: 'Task manager coded in Bootstrap 5, taking advantage of their components. Currently working in the local storage.',
+        description: 'Task manager coded in Bootstrap 5, taking advantage of their components and using local storage to save the data.',
         github: 'https://github.com/IsidoroAros/to-do-list-bootstrap',
         deploy: 'https://to-do-list-bootstrap.isidoroaros.vercel.app/',
         technology: ''
