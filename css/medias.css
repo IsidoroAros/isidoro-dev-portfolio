@@ -21,6 +21,10 @@
         align-items: center;
         margin-left: 100px;
     }
+    .navbar-list li,
+    .navbar-list li a{
+        margin: 0px;
+    }
     .navbar-logo{
         margin: 0;
         flex-basis: 5%;
@@ -115,9 +119,14 @@
         padding: 20px;
         padding-left: 0px;
     }
+    .footer-about{
+        width: 33vw;
+    }
+    .footer-explore{
+        width: 33vw;
+    }
     .footer-social-icons{
         flex-direction: row;
-        width: 40%;
-        margin-right: 30px;
+        width: 33vw;
     }
 }

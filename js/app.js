@@ -6,10 +6,14 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open')
     navList.classList.toggle('active');    
     navBar.classList.toggle('active');  
+    listItem.forEach( item => {
+        item.classList.toggle('active')
+    })
 })
 
 const navList = document.querySelector('.navbar-list')
 const navBar = document.querySelector('.navbar-top');
+const listItem = document.querySelectorAll('.navbar-list-item');
 
  //*-------------------------------------------------Card and projects
  
