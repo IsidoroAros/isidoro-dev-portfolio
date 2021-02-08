@@ -1,4 +1,4 @@
-const projectsDB = [
+export const projectsDB = [
     {
         image: '/img/sistemaPyme.jfif"',
         title: 'Accounting system',
@@ -24,6 +24,14 @@ const projectsDB = [
         description: 'Task manager coded in Bootstrap 5, taking advantage of their components and using local storage to save the data.',
         github: 'https://github.com/IsidoroAros/to-do-list-bootstrap',
         deploy: 'https://to-do-list-bootstrap.isidoroaros.vercel.app/',
+        technology: ''
+    },
+    {
+        image: '/img/paletteur.png"',
+        title: 'Palette generator',
+        briefDescription: 'Paletteur is a random palette </br> generator.',
+        github: 'https://github.com/IsidoroAros/paletteur-random-color-generator',
+        deploy: 'https://paletteur-random-palette-generator.vercel.app/',
         technology: ''
     }
 ]

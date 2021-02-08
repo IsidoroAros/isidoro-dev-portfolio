@@ -1,3 +1,5 @@
+import {projectsDB} from './db.js'
+
 //*-------------------------------------------------Navbar
 
 const hamburger = document.querySelector('#nav-icon4');
