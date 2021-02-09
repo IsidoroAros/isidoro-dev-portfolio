@@ -1,4 +1,13 @@
 export const projectsDB = [
+        {
+        image: '/img/victoryCoin.png"',
+        title: 'Crypto converter',
+        briefDescription: 'Coin and crypto prices <br> converter.',
+        description: 'Personal project to get parity between crypto and fiat using an API. On next update a calculator will be added.',
+        github: 'https://github.com/IsidoroAros/crypto-converter',
+        deploy: 'https://crypto-converter-lyart.vercel.app/#',
+        technology: ''
+    },
     {
         image: '/img/sistemaPyme.jfif"',
         title: 'Accounting system',
